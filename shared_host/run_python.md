@@ -157,7 +157,7 @@ So, it's ok to try starting the application even if it's already running.
 
 I set 2 crojobs (using cpanel, in my case):
 1. Every 30 minutes run the command: `/home/{{user}}/release/scripts/run_process.sh hello_flask start`
-2. Every day at 00:01 the command: `/home/texorcc1/release/scripts/run_process.sh hello_flask stop;/home/texorcc1/release/scripts/run_process.sh hello_flask start`
+2. Every day at 00:01 the command: `/home/{{user}}/release/scripts/run_process.sh hello_flask stop;/home/{{user}}/release/scripts/run_process.sh hello_flask start`
 
 I don't care too much if the application is unavailable for a few minutes, so I was ok with just starting the application every 30 minutes if it is stopped.
 I also thought that it would be a good idea to restart the application once a day, in case it doesn't do perfect garbage collection, or breaks for some other reason.
